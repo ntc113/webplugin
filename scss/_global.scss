@@ -1,0 +1,23 @@
+.no-left {
+	padding-left: 0 !important;
+	margin-left: 0 !important;
+}
+.no-right {
+	padding-right: 0 !important;
+	margin-right: 0 !important;
+}
+.no-padding {
+	padding: 0 !important;
+}
+.no-margin {
+	margin: 0 !important;
+}
+.ng-hide {
+  @extend %hidden;
+}
+.col {
+	float: left;
+}
+.col-3 {
+	width: 33.333%;
+}

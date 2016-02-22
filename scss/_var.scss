@@ -1,0 +1,86 @@
+// font
+$fontSize: 13px;
+
+// size of block
+$buttonToggleWidth: 100px;
+$buttonToggleHeight: 20px;
+
+$pluginWidth: 640px;
+$pluginHeight: 360px;
+$pluginPosition: fixed;
+$pluginMarginRight: 5px;
+$borderWidth: 1px;
+$borderRadius: 10px;
+
+$leftWidth: 2/5 * $pluginWidth;
+$rightWidth: $pluginWidth - $leftWidth - $borderWidth;
+$boxTopHeight: 40px;
+$leftTabWidth: 40px;
+$leftTabHeight: $pluginHeight - $boxTopHeight;
+
+$leftContentWidth: $leftWidth - $leftTabWidth - $borderWidth;
+$leftSearchBoxHeight: 40px;
+$leftContentHeight: $pluginHeight - $boxTopHeight - $leftSearchBoxHeight;
+$imDialogPadding: 5px;
+$avatarSize: 40px;
+$avatarPadding: 5px;
+$messageWidth: $leftContentWidth - $avatarSize - 2*$avatarPadding;
+
+$rightBottomBoxHeight: 32px;
+$rightBottomBoxPadding: 9px;
+$rightContentHeight: $pluginHeight - $boxTopHeight - $rightBottomBoxHeight - 2*$rightBottomBoxPadding;
+
+
+// background-color 
+$pluginBgColor: #fff;
+$sidebarBgColor: #fff;
+$mainContentBgColor: #fff;
+$baseColor: #5682a3;
+$baseColorHover: #3a6d99;
+$textInBaseColor: #b9cfe3;
+// avatar
+$cl0: #ecd074;
+$cl1: #fba76f;
+$cl2: #cc90e2;
+$cl3: #73cdd0;
+$cl4: #6fb1e4;
+$cl5: #f98bae;
+$cl6: #80d066;
+$cl7: #b3e0ff;
+
+
+// place holder
+%hidden {
+	display: none;
+}
+%fl {
+	float: left;
+}
+%pluginTransitionBottom {
+	transition : 100ms bottom;
+}
+%pluginTransitionRight {
+	transition : 100ms right;
+}
+%mainBox {
+	height: $pluginHeight;
+	position: absolute;
+}
+%fullHeight {
+	height: $pluginHeight;
+}
+%leftContentWidth {
+	width: $leftWidth - $leftTabWidth - $borderWidth;
+}
+%contentHeight {
+	height: $pluginHeight - $boxTopHeight;
+}
+%top {
+	height: $boxTopHeight;
+	background-color: #0398f7;
+	padding-left: 15px;
+	color: #fff;
+}
+%contentH {
+	height: $pluginHeight - $boxTopHeight;
+}

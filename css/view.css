@@ -1,0 +1,229 @@
+/** initial setup **/
+/** initial setup **/
+.nano {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%; }
+  .nano > .nano-content {
+    position: absolute;
+    overflow: scroll;
+    overflow-x: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0; }
+    .nano > .nano-content:focus {
+      outline: thin dotted; }
+    .nano > .nano-content::-webkit-scrollbar {
+      display: none; }
+  .nano > .nano-pane {
+    background-color: rgba(216, 223, 225, 0.45);
+    position: absolute;
+    width: 10px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    visibility: hidden\9;
+    /* Target only IE7 and IE8 with this hack */
+    opacity: .01;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -o-transition: .2s;
+    transition: .2s;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px; }
+    .nano > .nano-pane > .nano-slider {
+      background: #444;
+      background-color: rgba(137, 160, 179, 0.5);
+      position: relative;
+      margin: 0 1px;
+      -webkit-border-radius: 3px;
+      -moz-border-radius: 3px;
+      border-radius: 3px; }
+
+.has-scrollbar > .nano-content::-webkit-scrollbar {
+  display: block; }
+
+.nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
+  visibility: visible\9;
+  opacity: 0.99; }
+
+.ng-hide {
+  display: none; }
+
+#container #sidebar .sidebar_content > .tabs_title, #container #sidebar .sidebar_content > .tabs_search, #container #sidebar .sidebar_content > .tabs_content, #container #sidebar .sidebar_content > .tabs_content > .tab-pane .im_dialog > .im_dialog_photo, #container #sidebar .sidebar_content > .tabs_content > .tab-pane .im_dialog .im_dialog_message {
+  float: left; }
+
+#button-toggle, #container {
+  transition: 100ms bottom; }
+
+#container #sidebar {
+  transition: 100ms right; }
+
+#container #sidebar, #container #main {
+  height: 360px;
+  position: absolute; }
+
+#container {
+  height: 360px; }
+
+#container #sidebar .sidebar_content > .tabs_search, #container #sidebar .sidebar_content > .tabs_content {
+  width: 215px; }
+
+#container #sidebar .sidebar_content, #container #main .main_content {
+  height: 320px; }
+
+#container #sidebar .top, #container #main .top {
+  height: 40px;
+  background-color: #0398f7;
+  padding-left: 15px;
+  color: #fff; }
+
+.cl0 {
+  background-color: #ecd074; }
+
+.cl1 {
+  background-color: #fba76f; }
+
+.cl2 {
+  background-color: #cc90e2; }
+
+.cl3 {
+  background-color: #73cdd0; }
+
+.cl4 {
+  background-color: #6fb1e4; }
+
+.cl5 {
+  background-color: #f98bae; }
+
+.cl6 {
+  background-color: #80d066; }
+
+.clNaN, .cl-1 {
+  background-color: #b3e0ff; }
+
+.no-left {
+  padding-left: 0 !important;
+  margin-left: 0 !important; }
+
+.no-right {
+  padding-right: 0 !important;
+  margin-right: 0 !important; }
+
+.no-padding {
+  padding: 0 !important; }
+
+.no-margin {
+  margin: 0 !important; }
+
+.col {
+  float: left; }
+
+.col-3 {
+  width: 33.333%; }
+
+.show #container {
+  bottom: 0; }
+.show #button-toggle {
+  bottom: 360px; }
+
+#button-toggle {
+  position: fixed;
+  width: 100px;
+  height: 20px;
+  border: solid 1px #5682a3;
+  right: 5px;
+  bottom: 0;
+  text-align: center;
+  cursor: pointer; }
+
+#container {
+  overflow: hidden;
+  font-size: 13px;
+  width: 383px;
+  position: fixed;
+  bottom: -360px;
+  right: 5px;
+  border-radius: 10px 0 10px 10px; }
+  #container.show {
+    width: 640px; }
+  #container.show > #sidebar {
+    width: 256px;
+    right: 383px;
+    z-index: 1; }
+  #container #sidebar {
+    width: 0;
+    right: 127px;
+    z-index: 0;
+    background-color: #fff; }
+    #container #sidebar .sidebar_content > .tabs_title {
+      height: 100%;
+      width: 40px;
+      background-color: #5682a3;
+      color: #fff;
+      text-align: center; }
+      #container #sidebar .sidebar_content > .tabs_title > div {
+        cursor: pointer;
+        height: 50px;
+        line-height: 50px; }
+        #container #sidebar .sidebar_content > .tabs_title > div.active {
+          background-color: #369;
+          color: #fff; }
+    #container #sidebar .sidebar_content > .tabs_search {
+      height: 40px; }
+      #container #sidebar .sidebar_content > .tabs_search > input {
+        margin: 5px 5%;
+        padding-left: 25px;
+        width: 90%;
+        height: 30px; }
+    #container #sidebar .sidebar_content > .tabs_content > .tab-pane {
+      cursor: pointer;
+      height: 280px; }
+      #container #sidebar .sidebar_content > .tabs_content > .tab-pane .im_dialog {
+        padding: 5px 0;
+        height: 45px; }
+        #container #sidebar .sidebar_content > .tabs_content > .tab-pane .im_dialog > .im_dialog_photo {
+          width: 40px;
+          height: 40px;
+          margin: 0 5px; }
+          #container #sidebar .sidebar_content > .tabs_content > .tab-pane .im_dialog > .im_dialog_photo > .im_dialog_photo {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            line-height: 40px;
+            color: #fff;
+            text-align: center; }
+        #container #sidebar .sidebar_content > .tabs_content > .tab-pane .im_dialog .im_dialog_message {
+          width: 165px; }
+          #container #sidebar .sidebar_content > .tabs_content > .tab-pane .im_dialog .im_dialog_message > span {
+            display: block; }
+            #container #sidebar .sidebar_content > .tabs_content > .tab-pane .im_dialog .im_dialog_message > span > span {
+              float: right;
+              margin-right: 10px; }
+            #container #sidebar .sidebar_content > .tabs_content > .tab-pane .im_dialog .im_dialog_message > span > .badge {
+              background: #ccc none repeat scroll 0 0;
+              border-radius: 100%;
+              color: red;
+              height: 20px;
+              text-align: center;
+              width: 20px; }
+    #container #sidebar .sidebar_content > .tabs_content > .tab-pane.active {
+      display: block; }
+  #container #main {
+    width: 383px;
+    right: 0;
+    z-index: 1;
+    background-color: #fff; }
+    #container #main .main_content {
+      border-left: 1px solid #ccc;
+      border-right: 1px solid #ccc; }
+      #container #main .main_content > .im_history {
+        height: 270px; }
+      #container #main .main_content > .im_bottom {
+        height: 32px;
+        padding: 9px 0; }
+
+/*# sourceMappingURL=view.css.map */
